@@ -1,9 +1,13 @@
 import logo from './logo.svg';
-import './App.css';
+import TestComponent from './components/TestComponent';
+import Navbar from './components/NavBar';
+import './App.scss';
 
 function App() {
+  const value = 10
   return (
-    <div className="App">
+    <div className="App" data-bs-theme="dark">
+      <Navbar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,6 +21,8 @@ function App() {
         >
           Learn React
         </a>
+        <TestComponent name='Test' number={value}/>
+        <TestComponent name='Prueba' saludar={() => console.log("Hola mundo")} />
       </header>
     </div>
   );
