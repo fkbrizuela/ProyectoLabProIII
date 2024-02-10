@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidget from "./CartWidget";
 
 function NavScroll() {
     return (
@@ -18,30 +19,34 @@ function NavScroll() {
                         navbarScroll
                     >
                         <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
-                        <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                        <Nav.Link href="#action2">Galeria</Nav.Link>
+                        <Nav.Link href="#action3">Info</Nav.Link>
+                        <Nav.Link href="#action4">Contacto</Nav.Link>
+                        <NavDropdown title="Productos" id="navbarScrollingDropdown">
+                            <NavDropdown.Item href="#action3">Categoria 1</NavDropdown.Item>
+                            <NavDropdown.Item href="#action3">Categoria 2</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
-                                Another action
+                                Categoria 3
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action5">
-                                Something else here
+                                Especiales
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#" disabled>
-                            Link
+                            Inicio
                         </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
+                    <Button variant="outline-light">Buscar</Button>
                         <Form.Control
                             type="search"
-                            placeholder="Search"
+                            placeholder="Buscar"
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-light">Search</Button>
                     </Form>
+                    <CartWidget/>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
