@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import TestComponent from './components/TestComponents/TestComponent';
-import Navbar from './components/NavBar';
-import './App.scss';
-import  Card  from './components/TestComponents/Card';
-import ItemListContainer from './components/ItemListContainer';
-import './styles/ItemListContainer.css';
-import FuntionalTestComponent from './components/TestComponents/FuntionalTestComponent';
-import ItemCount from './components/ItemCount';
-import CounterDate from './components/TestComponents/CounterDate';
-import CountriesContainer from './components/TestComponents/CountriesContainer';
-import MapComponent from './components/TestComponents/MapComponent';
+import logo from "./logo.svg";
+import TestComponent from "./components/TestComponents/TestComponent";
+import Navbar from "./components/NavBar";
+import "./App.scss";
+import Card from "./components/TestComponents/Card";
+import ItemListContainer from "./components/ItemListContainer";
+import "./styles/ItemListContainer.css";
+import FuntionalTestComponent from "./components/TestComponents/FuntionalTestComponent";
+import ItemCount from "./components/ItemCount";
+import CounterDate from "./components/TestComponents/CounterDate";
+import CountriesContainer from "./components/TestComponents/CountriesContainer";
+import MapComponent from "./components/TestComponents/MapComponent";
+import { Container } from "react-bootstrap";
 
 function App() {
-  const value = 10
-  const saludar = () => console.log("Hola mundo")
+  const value = 10;
+  const saludar = () => console.log("Hola mundo");
   return (
     <div className="App" data-bs-theme="dark">
-      <Navbar/>
-      <ItemListContainer greeting ={"Bienvenidos!"}/>
+      <Navbar />
+      <Container>
+        <ItemListContainer greeting={"Bienvenidos!"} />
+      </Container>
       <ItemCount stock={5} initial={1} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -32,17 +35,21 @@ function App() {
         >
           Learn React
         </a>
-        <TestComponent name='Test' number={value}/>
-        <TestComponent name='Prueba' /*saludar={() => console.log("Hola mundo")}*/ />
-        <TestComponent saludar={saludar}/>
+        <TestComponent name="Test" number={value} />
+        <TestComponent
+          name="Prueba" /*saludar={() => console.log("Hola mundo")}*/
+        />
+        <TestComponent saludar={saludar} />
         <Card>
-          <TestComponent name='Children'/>
+          <TestComponent name="Children" />
           <h3>un children también puede ser jsx/html</h3>
         </Card>
-        <FuntionalTestComponent newComponent={TestComponent}></FuntionalTestComponent>
-        <CounterDate/>
-        <CountriesContainer/>
-        <MapComponent/>
+        <FuntionalTestComponent
+          newComponent={TestComponent}
+        ></FuntionalTestComponent>
+        <CounterDate />
+        <CountriesContainer />
+        <MapComponent />
       </header>
     </div>
   );
