@@ -1,10 +1,15 @@
 import logo from './logo.svg';
-import TestComponent from './components/TestComponent';
+import TestComponent from './components/TestComponents/TestComponent';
 import Navbar from './components/NavBar';
 import './App.scss';
-import  Card  from './components/Card';
+import  Card  from './components/TestComponents/Card';
 import ItemListContainer from './components/ItemListContainer';
 import './styles/ItemListContainer.css';
+import FuntionalTestComponent from './components/TestComponents/FuntionalTestComponent';
+import ItemCount from './components/ItemCount';
+import CounterDate from './components/TestComponents/CounterDate';
+import CountriesContainer from './components/TestComponents/CountriesContainer';
+import MapComponent from './components/TestComponents/MapComponent';
 
 function App() {
   const value = 10
@@ -12,7 +17,8 @@ function App() {
   return (
     <div className="App" data-bs-theme="dark">
       <Navbar/>
-      <ItemListContainer greeting ={"una prop"}/>
+      <ItemListContainer greeting ={"Bienvenidos!"}/>
+      <ItemCount stock={5} initial={1} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -31,7 +37,12 @@ function App() {
         <TestComponent saludar={saludar}/>
         <Card>
           <TestComponent name='Children'/>
+          <h3>un children también puede ser jsx/html</h3>
         </Card>
+        <FuntionalTestComponent newComponent={TestComponent}></FuntionalTestComponent>
+        <CounterDate/>
+        <CountriesContainer/>
+        <MapComponent/>
       </header>
     </div>
   );
