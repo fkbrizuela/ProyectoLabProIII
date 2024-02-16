@@ -4,7 +4,12 @@ import ItemList from "./ItemList"
 const products = [
     {id: 1, name:'string', description:'string', stock:'number'},
     {id: 2, name:'string', description:'string', stock:'number'},
-    {id: 3, name:'string', description:'string', stock:'number'}
+    {id: 3, name:'string', description:'string', stock:'number'},
+    {id: 4, name:'string', description:'string', stock:'number'},
+    {id: 5, name:'string', description:'string', stock:'number'},
+    {id: 6, name:'string', description:'string', stock:'number'},
+    {id: 7, name:'string', description:'string', stock:'number'},
+    {id: 8, name:'string', description:'string', stock:'number'}
 ]
 
 const ItemListContainer = ({greeting}) => {
@@ -19,6 +24,7 @@ const ItemListContainer = ({greeting}) => {
             <h1>Lista de Productos</h1>
             <p>{greeting}</p>
             <h2>{load}</h2>
+            <h3>ItemList</h3>
             <ItemList products ={products}/>
         </div>
     )
