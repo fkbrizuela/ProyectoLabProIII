@@ -26,7 +26,7 @@ const ItemCount = ({ stock, initial /* onAdd */ }) => {
 
 	return (
 		<>
-			<div>Counter</div>
+			<h5>Counter</h5>
 			<Button onClick={addHandler} variant="success">+</Button>
 			{count}
 			<Button onClick={lessHandler} variant="danger">-</Button>
