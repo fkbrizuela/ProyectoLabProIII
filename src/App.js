@@ -6,11 +6,12 @@ import Card from "./components/TestComponents/Card";
 import ItemListContainer from "./components/ItemListContainer";
 import "./styles/ItemListContainer.css";
 import FuntionalTestComponent from "./components/TestComponents/FuntionalTestComponent";
-import ItemCount from "./components/ItemCount";
+/* import ItemCount from "./components/ItemCount"; */
 import CounterDate from "./components/TestComponents/CounterDate";
 import CountriesContainer from "./components/TestComponents/CountriesContainer";
 import MapComponent from "./components/TestComponents/MapComponent";
 import { Container } from "react-bootstrap";
+import ApisContainer from "./components/APIS/ApisContainer";
 
 function App() {
   const value = 10;
@@ -21,7 +22,7 @@ function App() {
       <Container>
         <ItemListContainer greeting={"Bienvenidos!"} />
       </Container>
-      <ItemCount stock={5} initial={1} />
+     {/*  <ItemCount stock={5} initial={1} /> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -50,6 +51,7 @@ function App() {
         <CounterDate />
         <CountriesContainer />
         <MapComponent />
+        <ApisContainer/>
       </header>
     </div>
   );

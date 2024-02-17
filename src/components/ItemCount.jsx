@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
-const ItemCount = ({ stock, initial /* onAdd */ }) => {
-	const [count, setCount] = useState(initial)
+const ItemCount = ({ stock,  /* onAdd */ }) => {
+	const [count, setCount] = useState(1)
 
 	useEffect(() => {
 		console.log('El componente se montó')
@@ -19,7 +19,7 @@ const ItemCount = ({ stock, initial /* onAdd */ }) => {
 	}
 
 	const lessHandler = () => {
-		if (count != 0) {
+		if (count != 1) {
 			setCount(count - 1)
 		}
 	}

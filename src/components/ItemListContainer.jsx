@@ -2,14 +2,14 @@ import { useState } from "react"
 import ItemList from "./ItemList"
 
 const products = [
-    {id: 1, name:'string', description:'string', stock:'number'},
-    {id: 2, name:'string', description:'string', stock:'number'},
-    {id: 3, name:'string', description:'string', stock:'number'},
-    {id: 4, name:'string', description:'string', stock:'number'},
-    {id: 5, name:'string', description:'string', stock:'number'},
-    {id: 6, name:'string', description:'string', stock:'number'},
-    {id: 7, name:'string', description:'string', stock:'number'},
-    {id: 8, name:'string', description:'string', stock:'number'}
+    {id: 1, name:'string', description:'string', stock:5},
+    {id: 2, name:'string', description:'string', stock:10},
+    {id: 3, name:'string', description:'string', stock:7},
+    {id: 4, name:'string', description:'string', stock:6},
+    {id: 5, name:'string', description:'string', stock:4},
+    {id: 6, name:'string', description:'string', stock:2},
+    {id: 7, name:'string', description:'string', stock:9},
+    {id: 8, name:'string', description:'string', stock:5}
 ]
 
 const ItemListContainer = ({greeting}) => {

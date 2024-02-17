@@ -12,7 +12,7 @@ const Item = ({ product }) => {
           <Card.Text>
             {product.description}
           </Card.Text>
-          <ItemCount/>
+          <ItemCount stock={product.stock} /* initial={1} *//>
         </Card.Body>
       </Card>
     </>
