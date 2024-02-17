@@ -12,6 +12,7 @@ import CountriesContainer from "./components/TestComponents/CountriesContainer";
 import MapComponent from "./components/TestComponents/MapComponent";
 import { Container } from "react-bootstrap";
 import ApisContainer from "./components/APIS/ApisContainer";
+import MoviesContainer from "./components/Movies/MoviesContainer"
 
 function App() {
   const value = 10;
@@ -53,6 +54,7 @@ function App() {
         <MapComponent />
         <ApisContainer/>
       </header>
+      <MoviesContainer/>
     </div>
   );
 }
