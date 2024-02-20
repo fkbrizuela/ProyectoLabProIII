@@ -1,24 +1,22 @@
+import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router-dom';
+
 
 const MovieCard = (props) => {
 
-  const { tittle, director, year, duration, image } = props.movie
+  const { id, tittle, director, year, duration, image } = props.movie
 
   return (
     <div>
-{/*       <div>{tittle}</div>
-      <div>{director}</div>
-      <div>{duration}</div>
-      <div>{year}</div> */}
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '12rem' }}>
         <Card.Img variant="top" src={image} />
         <Card.Body>
           <Card.Title>{tittle}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
+{/*           <Card.Text>
+            Some quick example
+          </Card.Text> */}
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroup.Item>{director}</ListGroup.Item>
@@ -26,8 +24,7 @@ const MovieCard = (props) => {
           <ListGroup.Item>{year}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
+          <Link to={`/Peliculas/${id}`} className='btn btn-primary'>ver</Link>
         </Card.Body>
       </Card>
     </div>

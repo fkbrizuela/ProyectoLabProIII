@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
-const ItemCount = ({ stock,  /* onAdd */ }) => {
+const ItemCount = ({ stock,  id }) => {
 	const [count, setCount] = useState(1)
 
-	useEffect(() => {
+/* 	useEffect(() => {
 		console.log('El componente se montó')
 	}, [])
 
 	useEffect(() => {
 		console.log('El componente cambió el estado')
-	}, [count])
+	}, [count]) */
 
 	const addHandler = () => {
 		if (count < stock) {
@@ -31,7 +32,12 @@ const ItemCount = ({ stock,  /* onAdd */ }) => {
 			{count}
 			<Button onClick={lessHandler} variant="danger">-</Button>
 			<div>
-				<Button>Agregar al carrito</Button>
+				<Link>
+					<Button>Agregar al carrito</Button>
+				</Link>
+				<Link to={`/Item/${id}`}>
+					<Button variant="outline-light">Detalle del producto</Button>
+				</Link>
 			</div>
 		</>
 

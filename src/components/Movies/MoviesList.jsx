@@ -16,7 +16,7 @@ const MoviesList = () => {
     const getMoviesPromise = new Promise((resolve, reject)=>{
       setTimeout(()=>{                       //al esperar que se resuelva la promesa despues de 2segundos  
         resolve( moviesData )               //se resuelve obteniendo moviesData
-      }, 2000)
+      }, 0)
     })
     getMoviesPromise.then( data =>{
       setMovies( data )

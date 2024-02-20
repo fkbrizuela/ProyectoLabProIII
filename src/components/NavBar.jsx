@@ -4,13 +4,14 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import CartWidget from "./CartWidget";
+import CartWidget from "./Market/CartWidget";
+import { Link, NavLink } from "react-router-dom";
 
 function NavScroll() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">ASTROMarket</Navbar.Brand>
+        <Navbar.Brand as = {Link} to="/">ASTROMarket</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,14 +19,14 @@ function NavScroll() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Galeria</Nav.Link>
-            <Nav.Link href="#action3">Info</Nav.Link>
+            <Nav.Link as = {Link}  to="/">Home</Nav.Link>
+            <Nav.Link as = {Link}  to="/Productos">Productos</Nav.Link>
+            <Nav.Link as = {Link}  to="/Peliculas">Peliculas</Nav.Link>
             <Nav.Link href="#action4">Contacto</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Categoria 1</NavDropdown.Item>
-              <NavDropdown.Item href="#action3">Categoria 2</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+              <NavDropdown.Item as = {Link}  to="/Category/Bebidas">Bebidas</NavDropdown.Item>
+              <NavDropdown.Item as = {Link}  to="/Category/Alimentos">Alimentos</NavDropdown.Item>
+              <NavDropdown.Item as = {Link}  to="#">
                 Categoria 3
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -33,9 +34,6 @@ function NavScroll() {
                 Especiales
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Inicio
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Button variant="outline-light">Buscar</Button>
@@ -46,7 +44,7 @@ function NavScroll() {
               aria-label="Search"
             />
           </Form>
-          <CartWidget />
+          <CartWidget/>
         </Navbar.Collapse>
       </Container>
     </Navbar>

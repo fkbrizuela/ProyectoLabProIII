@@ -21,7 +21,7 @@ export const moviesData = [
       director: 'Quentin Tarantino',
       year: '2003',
       duration: '1:51h',
-      image: 'https://pics.filmaffinity.com/Kill_Bill_Volumen_1-310054253-large.jpg'
+      image: 'https://i.pinimg.com/564x/20/e7/be/20e7be77ab4dfc4a6230cb5e7f7e8612.jpg'
     },
     {
       id: '4',
@@ -37,6 +37,6 @@ export const moviesData = [
       director: 'Steven Spielberg',
       year: '2018',
       duration: '2:20h',
-      image: 'https://pics.filmaffinity.com/Ready_Player_One-508487059-large.jpg'
+      image: 'https://i.pinimg.com/564x/da/0c/e7/da0ce75028f4e6c5fcc355f08a381e84.jpg'
     }
 ]
