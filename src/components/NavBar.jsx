@@ -22,7 +22,6 @@ function NavScroll() {
             <Nav.Link as = {Link}  to="/">Home</Nav.Link>
             <Nav.Link as = {Link}  to="/Productos">Productos</Nav.Link>
             <Nav.Link as = {Link}  to="/Peliculas">Peliculas</Nav.Link>
-            <Nav.Link href="#action4">Contacto</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item as = {Link}  to="/Category/Bebidas">Bebidas</NavDropdown.Item>
               <NavDropdown.Item as = {Link}  to="/Category/Alimentos">Alimentos</NavDropdown.Item>

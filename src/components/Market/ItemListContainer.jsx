@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
-import {getProducts } from "../../data/products"
+import {getAllProducts, getProductsByCategory } from "../../data/products"
 
 const ItemListContainer = ({ greeting }) => {
   const [load, setLoad] = useState('Cargando...')
@@ -16,15 +16,24 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     console.log(CategoryName);
-  }, [])
+  }, [CategoryName])
 
   useEffect(()=>{
-    getProducts()
-    .then((data)=>{
-      setProducts(data)
-    })
-    .catch((error)=>console.warn(error))
-  },[])
+    if(CategoryName) {
+      getProductsByCategory(CategoryName)
+      .then((data)=> setProducts(data))
+      .catch((error)=>console.warn(error))
+    }
+    else {
+      getAllProducts()
+      .then((data)=>setProducts(data))
+      .catch((error)=>console.warn(error))
+    }
+    
+  },[CategoryName])
+
+
+
   return (
     <div className="ContainerMain">
       <h1>Lista de Productos</h1>
