@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 import { getProduct } from "../../data/products";
 import { Container } from "react-bootstrap";
-import Card from 'react-bootstrap/Card';
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
